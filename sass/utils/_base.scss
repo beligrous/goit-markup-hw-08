@@ -1,0 +1,39 @@
+%flex-centered {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@mixin fonts($weight, $size, $lheight, $lspasing) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lheight;
+  letter-spacing: $lspasing;
+}
+
+body {
+  color: var(--main-text-color);
+  background-color: #ffffff;
+  font-family: $primeryFont;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 94px 0;
+}
+.section-title {
+  @include fonts(null, 36px, 42/36, null);
+  text-align: center;
+  color: var(--title-color);
+  margin-bottom: 50px;
+}
+.image {
+  display: block;
+}
