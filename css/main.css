@@ -160,6 +160,21 @@ summary {
   display: list-item;
 }
 
+:root {
+  --title-color: #212121;
+  --main-text-color: #757575;
+  --activ-text-color: #2196f3;
+  --icon-fill: #afb1b8;
+  --trans-duration: 250ms;
+  --trans-time-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-policy__label, .join__soc, .client, .team-member__soc, .values__icons, .modal__button, .btn-submit, .head__icon {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
 body {
   color: var(--main-text-color);
   background-color: #ffffff;
@@ -168,7 +183,7 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
@@ -188,21 +203,6 @@ body {
 
 .image {
   display: block;
-}
-
-.modal-policy__label, .join__soc, .client, .team-member__soc, .values__icons, .modal__button, .btn-submit, .head__icon {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-
-:root {
-  --title-color: #212121;
-  --main-text-color: #757575;
-  --activ-text-color: #2196f3;
-  --icon-fill: #afb1b8;
-  --trans-duration: 250ms;
-  --trans-time-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden {
@@ -316,25 +316,39 @@ body {
 }
 
 .hero {
-  height: 600px;
+  height: 400px;
   max-width: 1600px;
   background: #c4c4c4;
-  padding: 200px;
+  padding: 118px 0;
   margin: 0 auto;
   text-align: center;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img-bg-hero.jpg");
   background-size: cover;
   background-position: center;
 }
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    padding: 200px;
+  }
+}
 
 .hero__title {
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3636363636;
+  font-size: 26px;
+  line-height: 1.6153846154;
   letter-spacing: 0.06em;
   color: #ffffff;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.3636363636;
+    letter-spacing: 0.06em;
+  }
 }
 
 .hero__button {
@@ -454,6 +468,15 @@ body {
   font-size: 14px;
   line-height: 1.7142857143;
   color: var(--main-text-color);
+}
+
+.doing {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .doing {
+    display: block;
+  }
 }
 
 .doing__list {
@@ -734,7 +757,7 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -742,7 +765,7 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -750,7 +773,7 @@ body {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
 }
