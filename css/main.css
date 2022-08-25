@@ -188,9 +188,14 @@ body {
   margin-right: auto;
   padding: 0 15px;
 }
+@media screen and (miv-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .section-title {
@@ -203,6 +208,9 @@ body {
 
 .image {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .visually-hidden {
@@ -433,6 +441,7 @@ body {
 
 .values__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .values {
@@ -440,10 +449,18 @@ body {
 }
 
 .values__item {
-  width: 270px;
+  flex-basis: 100%;
+  margin: 0 auto 30px auto;
 }
-.values__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .values__item {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .values__item {
+    max-width: 354px;
+  }
 }
 
 .values__icons {
@@ -455,6 +472,7 @@ body {
 
 .values__title {
   color: var(--title-color);
+  text-align: center;
   margin-bottom: 10px;
 }
 

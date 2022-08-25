@@ -1,5 +1,6 @@
 .values__list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .values {
@@ -7,9 +8,18 @@
 }
 
 .values__item {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: 30px;
+  // width: 270px;
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+  flex-basis: 100%;
+  margin: 0 auto 30px auto;
+  @media screen and (min-width: 480px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
   }
 }
 
@@ -23,6 +33,7 @@
 
 .values__title {
   color: var(--title-color);
+  text-align: center;
   margin-bottom: 10px;
 }
 
