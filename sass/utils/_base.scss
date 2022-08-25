@@ -23,20 +23,31 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  @media screen and (miv-width: 480px) {
+  @media screen and (min-width: 480px) {
     max-width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
 }
 
 .section {
-  // padding: 94px 0;
   padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .section-title {
   @include fonts(null, 36px, 42/36, null);
   text-align: center;
   color: var(--title-color);
   margin-bottom: 50px;
+  @media screen and (max-width: 1200px) {
+    @include fonts(700, 28px, 33/28, null);
+  }
 }
 .image {
   display: block;
