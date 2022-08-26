@@ -18,7 +18,7 @@
 }
 
 .work-filter__button {
-  @include fonts(500, 16px, 26/16, 00.03em);
+  @include fonts(500, 16px, 26/16, 0.03em);
   font-family: inherit;
   font-style: inherit;
   color: #212121;
@@ -28,7 +28,7 @@
   padding: 6px 22px;
   border-radius: 4px;
   min-width: 73px;
-  border-color: transparent;
+  border: none;
   transition: color var(--trans-duration) var(--trans-time-function),
     background-color var(--trans-duration) var(--trans-time-function),
     box-shadow var(--trans-duration) var(--trans-time-function);
