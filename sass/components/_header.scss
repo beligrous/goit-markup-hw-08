@@ -20,6 +20,9 @@
 .head__list {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   & .head__item {
     display: flex;
     align-items: center;
@@ -32,6 +35,9 @@
 .navigation {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   .navigation__menu {
     margin-left: 93px;
   }
@@ -41,6 +47,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 767px) {
+    height: 60px;
+  }
 }
 
 .logo {
@@ -88,4 +97,23 @@
     left: 0;
     bottom: 0;
   }
+}
+
+.head__btn {
+  display: block;
+  padding: 0;
+  border: none;
+  background-color: #ffffff;
+  .head__menu & {
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+}
+
+.head__menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
 }
