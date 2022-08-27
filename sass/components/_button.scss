@@ -42,7 +42,9 @@
 }
 
 .btn-submit {
-  @extend %flex-centered;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   @include fonts(700, 16px, 30/16, 0.06em);
   height: 50px;
   min-width: 200px;
@@ -52,8 +54,10 @@
   color: #ffffff;
   border: none;
   padding: 10px 29px;
-  margin-left: 12px;
   transition: background-color var(--trans-duration) var(--trans-time-function);
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
   &:hover,
   &:focus {
     background-color: #188ce8;
