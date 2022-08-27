@@ -7,13 +7,17 @@
 
 .head__title {
   color: var(--title-color);
-  @include fonts(500, 14px, 16/14, 0.02em);
+  @include fonts(500, 14px, 16 / 14, 0.02em);
   display: block;
   padding: 32px 0;
   transition: color var(--trans-duration) var(--trans-time-function);
   &:hover,
   &:focus {
     color: var(--activ-text-color);
+  }
+  .head__menu & {
+    @include fonts(500, 40px, 47 / 40, 0.02em);
+    padding: 0;
   }
 }
 
@@ -30,6 +34,14 @@
   & .link.current {
     color: var(--activ-text-color);
   }
+  .head__menu & {
+    display: block;
+  }
+}
+
+.head__menu .head__item {
+  display: block;
+  margin-bottom: 32px;
 }
 
 .navigation {
@@ -40,6 +52,10 @@
   }
   .navigation__menu {
     margin-left: 93px;
+    @media screen and (max-width: 767px) {
+      margin-left: 0;
+      margin-bottom: 300px;
+    }
   }
 }
 
@@ -63,13 +79,16 @@
 }
 
 .head__contact {
-  @include fonts(500, 14px, 16/14, 0.02em);
+  @include fonts(500, 14px, 16 / 14, 0.02em);
   color: var(--main-text-color);
   display: flex;
   transition: color var(--trans-duration) var(--trans-time-function);
   .head &:hover,
   .head &:focus {
     color: var(--activ-text-color);
+  }
+  @media screen and (max-width: 767px) {
+    @include fonts(500, 34px, 40 / 34, 0.02em);
   }
 }
 
@@ -97,9 +116,14 @@
     left: 0;
     bottom: 0;
   }
+  &::after {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
 }
 
-.head__btn {
+.head-menu__btn {
   display: block;
   padding: 0;
   border: none;
@@ -111,9 +135,10 @@
   }
 }
 
-.head__menu {
+.head-menu {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  padding: 0 0 48px 40px;
 }

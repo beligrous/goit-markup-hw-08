@@ -269,6 +269,13 @@ body {
 .head__title:hover, .head__title:focus {
   color: var(--activ-text-color);
 }
+.head__menu .head__title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  padding: 0;
+}
 
 .head__list {
   display: flex;
@@ -286,6 +293,14 @@ body {
 .head__list .link.current {
   color: var(--activ-text-color);
 }
+.head__menu .head__list {
+  display: block;
+}
+
+.head__menu .head__item {
+  display: block;
+  margin-bottom: 32px;
+}
 
 .navigation {
   display: flex;
@@ -298,6 +313,12 @@ body {
 }
 .navigation .navigation__menu {
   margin-left: 93px;
+}
+@media screen and (max-width: 767px) {
+  .navigation .navigation__menu {
+    margin-left: 0;
+    margin-bottom: 300px;
+  }
 }
 
 .head--row {
@@ -335,6 +356,14 @@ body {
 .head .head__contact:hover, .head .head__contact:focus {
   color: var(--activ-text-color);
 }
+@media screen and (max-width: 767px) {
+  .head__contact {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.1764705882;
+    letter-spacing: 0.02em;
+  }
+}
 
 .head__icon {
   margin-right: 10px;
@@ -359,24 +388,30 @@ body {
   left: 0;
   bottom: 0;
 }
+@media screen and (max-width: 767px) {
+  .current::after {
+    display: none;
+  }
+}
 
-.head__btn {
+.head-menu__btn {
   display: block;
   padding: 0;
   border: none;
   background-color: #ffffff;
 }
-.head__menu .head__btn {
+.head__menu .head-menu__btn {
   margin-left: auto;
   margin-top: 10px;
   margin-right: 15px;
 }
 
-.head__menu {
+.head-menu {
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  padding: 0 0 48px 40px;
 }
 
 .hero {
