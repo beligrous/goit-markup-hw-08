@@ -26,6 +26,11 @@
     display: flex;
     align-items: center;
   }
+  & .head__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+  }
   & .head__item {
     @media screen and (min-width: 768px) {
       display: flex;
@@ -41,14 +46,6 @@
       display: flex;
     }
   }
-}
-
-.head__menu .head__list {
-  display: block;
-}
-
-.head__menu .head__item {
-  margin-bottom: 32px;
 }
 
 .head-connect {
@@ -80,7 +77,7 @@
     margin-left: 93px;
     @media screen and (max-width: 767px) {
       margin-left: 0;
-      margin-bottom: 300px;
+      margin-bottom: 302px;
     }
   }
 }
@@ -105,12 +102,15 @@
 }
 
 .head__contact {
-  @include fonts(500, 34px, 40 / 34, 0.02em);
+  @include fonts(500, 28px, 33 / 28, 0.02em);
   color: var(--main-text-color);
   transition: color var(--trans-duration) var(--trans-time-function);
   .head &:hover,
   .head &:focus {
     color: var(--activ-text-color);
+  }
+  @media screen and (min-width: 480px) {
+    @include fonts(500, 34px, 40 / 34, 0.02em);
   }
   @media screen and (min-width: 768px) {
     @include fonts(500, 12px, 14 / 12, 0.02em);
@@ -118,6 +118,12 @@
   }
   @media screen and (min-width: 1200px) {
     @include fonts(500, 14px, 16 / 14, 0.02em);
+  }
+}
+
+.head--contact {
+  @media screen and (max-width: 767px) {
+    color: var(--activ-text-color);
   }
 }
 
@@ -174,9 +180,12 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  // overflow-y: scroll;
+  overflow-y: scroll;
   background-color: #ffffff;
-  padding: 0 0 48px 40px;
+  padding: 0 0 10px 10px;
+  @media screen and (min-width: 480px) {
+    padding: 0 0 48px 40px;
+  }
 }
 
 .head-menu.is-open {
@@ -189,5 +198,32 @@
   background-color: #fff;
   @media screen and (min-width: 768px) {
     display: none;
+  }
+}
+
+.head-menu__soc {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.head-menu__item {
+  @include fonts(500, 15px, 20 / 15, 0.02em);
+  color: var(--activ-text-color);
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    padding-right: 4px;
+  }
+  &:not(:first-child) {
+    padding-left: 4px;
+  }
+  @media screen and (min-width: 480px) {
+    @include fonts(500, 18px, 22 / 18, 0.02em);
+    &:not(:last-child) {
+      padding-right: 10px;
+    }
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
   }
 }
