@@ -15,8 +15,8 @@
   </head>
   <body>
     <!-- Мобильное меню шапки -->
-    <div class="head-menu is-open">
-      <button class="head-menu__btn" type="button">
+    <div class="head-menu js-menu-container" id="mobile-menu">
+      <button class="head-menu__btn js-close-menu" type="button">
         <svg width="40" height="40">
           <use
             class="head__btn--close"
@@ -26,34 +26,34 @@
       </button>
       <nav class="navigation">
         <ul class="head__list navigation__menu">
-          <li class="head__item">
+          <li class="head__item list">
             <a class="head__title link current" href="./index.html">Студия</a>
           </li>
-          <li class="head__item">
+          <li class="head__item list">
             <a class="head__title link" href="./portfolio.html">Портфолио</a>
           </li>
-          <li class="head__item">
+          <li class="head__item list">
             <a class="head__title link" href="">Контакты</a>
           </li>
         </ul>
       </nav>
       <ul class="head__list">
-        <li class="head__item">
+        <li class="head__item list">
           <a class="head__contact link" href="tel:+380961111111">
             +38 096 111 11 11</a
           >
         </li>
-        <li class="head__item">
+        <li class="head__item list">
           <a class="head__contact link" href="mailto:info@devstudio.com">
             info@devstudio.com</a
           >
         </li>
       </ul>
       <ul class="head-menu__soc">
-        <li>Instagram</li>
-        <li>Twitter</li>
-        <li>Facebook</li>
-        <li>LinkedIn</li>
+        <li class="head-menu__item list">Instagram</li>
+        <li class="head-menu__item list">Twitter</li>
+        <li class="head-menu__item list">Facebook</li>
+        <li class="head-menu__item list">LinkedIn</li>
       </ul>
     </div>
     <!-- Шапка -->
@@ -63,7 +63,7 @@
           <a class="logo link" href="./index.html" lang="en"
             ><span class="logo--color logo">Web</span>Studio</a
           >
-          <ul class="head__list navigation__menu">
+          <ul class="head__list navigation__menu mobile-hidden">
             <li class="head__item">
               <a class="head__title link current" href="./index.html">Студия</a>
             </li>
@@ -75,8 +75,8 @@
             </li>
           </ul>
         </nav>
-        <ul class="head__list">
-          <li class="head__item">
+        <ul class="head__list head-connect mobile-hidden">
+          <li class="head__item list">
             <a class="head__contact link" href="mailto:info@devstudio.com">
               <svg class="head__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
@@ -84,7 +84,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="head__item">
+          <li class="head__item list">
             <a class="head__contact link" href="tel:+380961111111">
               <svg class="head__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -93,7 +93,12 @@
             >
           </li>
         </ul>
-        <button class="head__btn" type="button">
+        <button
+          class="head__btn js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <svg width="40" height="40">
             <use
               class="head__btn--menu"
@@ -712,5 +717,12 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>
