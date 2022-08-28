@@ -1278,6 +1278,7 @@ body {
 }
 
 .modal-policy__label {
+  flex-wrap: wrap;
   font-size: 14px;
   line-height: 1.7142857143;
   letter-spacing: 0.03em;
@@ -1285,9 +1286,16 @@ body {
 
 .modal-policy__link {
   color: var(--activ-text-color);
-  font-size: 12px;
-  line-height: 1.1666666667;
+  font-size: 10px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .modal-policy__link {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-policy__link {
@@ -1298,9 +1306,16 @@ body {
 }
 
 .modal-policy__text {
-  font-size: 12px;
-  line-height: 1.1666666667;
+  font-size: 10px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 480px) {
+  .modal-policy__text {
+    font-size: 12px;
+    line-height: 1.1666666667;
+    letter-spacing: 0.03em;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-policy__text {

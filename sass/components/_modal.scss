@@ -114,19 +114,26 @@
 
 .modal-policy__label {
   @extend %flex-centered;
+  flex-wrap: wrap;
   @include fonts(null, 14px, 24/14, 0.03em);
 }
 
 .modal-policy__link {
   color: var(--activ-text-color);
-  @include fonts(null, 12px, 14/12, 0.03em);
+  @include fonts(null, 10px, 12/10, 0.03em);
+  @media screen and (min-width: 480px) {
+    @include fonts(null, 12px, 14/12, 0.03em);
+  }
   @media screen and (min-width: 1200px) {
     @include fonts(null, 14px, 24/14, 0.03em);
   }
 }
 
 .modal-policy__text {
-  @include fonts(null, 12px, 14/12, 0.03em);
+  @include fonts(null, 10px, 12/10, 0.03em);
+  @media screen and (min-width: 480px) {
+    @include fonts(null, 12px, 14/12, 0.03em);
+  }
   @media screen and (min-width: 1200px) {
     @include fonts(null, 14px, 24/14, 0.03em);
   }
