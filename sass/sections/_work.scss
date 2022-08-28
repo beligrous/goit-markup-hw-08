@@ -65,7 +65,14 @@
   }
 }
 
+.work-list__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .work-card {
+  flex-grow: 1;
   border: 1px solid #ececec;
   border-top: none;
   padding: 20px 24px;
