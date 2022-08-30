@@ -10,7 +10,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("../images/Img-bg-hero-mob.jpg");
+    url("../../images/img-bg-hero-mob.jpg");
   background-size: cover;
   background-position: center;
   @media (min-device-pixel-ratio: 2),
@@ -21,7 +21,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url("../images/Img-bg-hero-mobx2.jpg");
+      url("../../images/img-bg-hero-mobx2.jpg");
   }
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
