@@ -79,6 +79,10 @@
       margin-left: 0;
       margin-bottom: 302px;
     }
+    @media screen and (max-width: 479px) {
+      margin-left: 0;
+      margin-bottom: 102px;
+    }
   }
 }
 
@@ -211,7 +215,6 @@
 
 .head-menu__soc {
   display: flex;
-  justify-content: center;
   margin-top: 64px;
 }
 
